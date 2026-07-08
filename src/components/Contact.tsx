@@ -11,7 +11,7 @@ const cards: {
   cta: string;
 }[] = [
   {
-    href: 'mailto:Roochyaruae@gmail.com?subject=Product%20Enquiry%20%E2%80%94%20Seyedro',
+    href: 'mailto:Roochyaruae@gmail.com?subject=Product%20Enquiry%20%E2%80%94%20Seyedro&body=Hello%20Seyedro%2C%0A%0AI%27d%20like%20a%20quote%20for%3A%0A-%20%0A%0AQuantity%3A%20%0ADelivery%20location%3A%20%0A%0AThank%20you.',
     icon: () => <MailIcon />,
     label: 'EMAIL US',
     value: 'Roochyaruae@gmail.com',
@@ -25,7 +25,7 @@ const cards: {
     cta: 'Tap to call →',
   },
   {
-    href: 'https://wa.me/971507671419',
+    href: `https://wa.me/971507671419?text=${encodeURIComponent("Hi Seyedro, I'd like to know more about your products and pricing.")}`,
     icon: () => <WhatsAppIcon size={27} fill="#0A0A0A" />,
     label: 'WHATSAPP',
     value: 'Chat with us',

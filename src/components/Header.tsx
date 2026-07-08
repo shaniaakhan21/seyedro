@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { CloseIcon, MenuIcon } from './icons';
 import { useTheme } from '../context/ThemeContext';
-import goldIcon from '../assets/logo/seyedro-icon-gold.png';
+import goldIcon from '../assets/logo/yellow-logo.png';
 import blackIcon from '../assets/logo/seyedro-icon-black.png';
 
 const navLinks = [

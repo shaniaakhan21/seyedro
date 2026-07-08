@@ -1,9 +1,13 @@
 import { WhatsAppIcon } from './icons';
 
+const WHATSAPP_MESSAGE = encodeURIComponent(
+  "Hi Seyedro, I'd like to know more about your products and pricing.",
+);
+
 export function WhatsAppButton() {
   return (
     <a
-      href="https://wa.me/971507671419"
+      href={`https://wa.me/971507671419?text=${WHATSAPP_MESSAGE}`}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
