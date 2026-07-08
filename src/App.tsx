@@ -11,7 +11,7 @@ import { WhatsAppButton } from './components/WhatsAppButton';
 
 function App() {
   return (
-    <div className="bg-ink w-full overflow-hidden">
+    <div className="bg-page w-full overflow-hidden">
       <Header />
       <Hero />
       <TrustStrip />

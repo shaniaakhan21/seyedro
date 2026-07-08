@@ -10,6 +10,51 @@
   --color-ink: #0a0a0a;
   --color-charcoal: #141414;
   --color-gold: #fed109;
+
+  --color-page: var(--page);
+  --color-page-alt: var(--page-alt);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-fg-faint: var(--fg-faint);
+  --color-page-accent: var(--page-accent);
+  --color-page-border: var(--page-border);
+  --color-cta: var(--cta);
+  --color-cta-fg: var(--cta-fg);
+  --color-surface: var(--surface);
+  --color-surface-alt: var(--surface-alt);
+  --color-surface-border: var(--surface-border);
+}
+
+:root {
+  --page: #fed109;
+  --page-alt: #f0c000;
+  --fg: #0a0a0a;
+  --fg-muted: #4a4a4a;
+  --fg-faint: rgba(10, 10, 10, 0.45);
+  --page-accent: #0a0a0a;
+  --page-border: rgba(10, 10, 10, 0.25);
+  --cta: #0a0a0a;
+  --cta-fg: #fed109;
+  --surface: #ffdb33;
+  --surface-alt: #ffe873;
+  --surface-border: rgba(10, 10, 10, 0.15);
+  --page-glow: rgba(10, 10, 10, 0.1);
+}
+
+:root[data-theme='black'] {
+  --page: #0a0a0a;
+  --page-alt: #141414;
+  --fg: #ffffff;
+  --fg-muted: #b4b4b4;
+  --fg-faint: #7a7a7a;
+  --page-accent: #fed109;
+  --page-border: rgba(254, 207, 9, 0.18);
+  --cta: #fed109;
+  --cta-fg: #0a0a0a;
+  --surface: #141414;
+  --surface-alt: #1e1e1e;
+  --surface-border: rgba(255, 255, 255, 0.1);
+  --page-glow: rgba(254, 207, 9, 0.16);
 }
 
 @layer base {
@@ -24,10 +69,10 @@
   body {
     margin: 0;
     padding: 0;
-    background: #0a0a0a;
+    background: var(--page);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
-    color: #1c1c1c;
+    color: var(--fg);
   }
 
   a {

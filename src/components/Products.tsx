@@ -136,10 +136,10 @@ function CategoryCard({ category }: { category: Category }) {
       {category.products.map((p) => (
         <div
           key={p}
-          className="flex items-center gap-2 sm:gap-2.75 px-2.5 sm:px-3.75 py-2.5 sm:py-3.25 bg-[#1A1A1A] border border-white/10 rounded-[9px] hover:border-gold hover:bg-[#222222] transition-colors"
+          className="flex items-center gap-2 sm:gap-2.75 px-2.5 sm:px-3.75 py-2.5 sm:py-3.25 bg-surface border border-surface-border rounded-[9px] hover:border-gold hover:bg-surface-alt transition-colors"
         >
           <span className="w-2 h-2 rounded-sm bg-gold flex-none rotate-45" />
-          <span className="font-semibold text-[12px] sm:text-[13.5px] text-white">{p}</span>
+          <span className="font-semibold text-[12px] sm:text-[13.5px] text-fg">{p}</span>
         </div>
       ))}
     </div>
@@ -148,9 +148,9 @@ function CategoryCard({ category }: { category: Category }) {
   return (
     <div
       id={category.id}
-      className="bg-charcoal border border-white/10 rounded-2xl overflow-hidden mt-4.5 first:mt-8.5"
+      className="bg-surface border border-surface-border rounded-2xl overflow-hidden mt-4.5 first:mt-8.5"
     >
-      <div className="flex flex-wrap sm:flex-nowrap items-center gap-4.5 px-7 py-5.5 border-b border-white/10">
+      <div className="flex flex-wrap sm:flex-nowrap items-center gap-4.5 px-7 py-5.5 border-b border-surface-border">
         <div className="order-1 w-14 h-14 rounded-full bg-ink flex items-center justify-center flex-none">
           <Icon />
         </div>
@@ -158,8 +158,8 @@ function CategoryCard({ category }: { category: Category }) {
           {category.count} PRODUCTS
         </div>
         <div className="order-3 sm:order-2 w-full sm:w-auto sm:flex-1">
-          <h3 className="font-display text-[21px] text-white m-0">{category.title}</h3>
-          <p className="font-normal text-[12.5px] leading-[1.5] text-[#9A9A9A] mt-1 max-w-[560px]">
+          <h3 className="font-display text-[21px] text-fg m-0">{category.title}</h3>
+          <p className="font-normal text-[12.5px] leading-[1.5] text-fg-muted mt-1 max-w-[560px]">
             {category.description}
           </p>
         </div>
@@ -174,18 +174,18 @@ function CategoryCard({ category }: { category: Category }) {
 
 export function Products() {
   return (
-    <section id="products" className="bg-ink py-12 sm:py-19.5">
+    <section id="products" className="bg-page py-12 sm:py-19.5">
       <div className="max-w-[1180px] mx-auto px-8">
         <div className="flex items-end justify-between gap-6 flex-wrap">
           <div>
-            <div className="font-mono font-semibold text-[12px] tracking-[3px] text-gold">
+            <div className="font-mono font-semibold text-[12px] tracking-[3px] text-page-accent">
               WHAT WE SUPPLY
             </div>
-            <h2 className="font-display text-4xl sm:text-[42px] text-white mt-3 tracking-[-0.5px]">
+            <h2 className="font-display text-4xl sm:text-[42px] text-fg mt-3 tracking-[-0.5px]">
               Our product range
             </h2>
           </div>
-          <p className="font-normal text-[14px] leading-[1.65] text-[#B4B4B4] max-w-[380px] m-0">
+          <p className="font-normal text-[14px] leading-[1.65] text-fg-muted max-w-[380px] m-0">
             Six core categories covering construction chemicals, coatings and industrial raw
             materials — available in commercial and bulk quantities.
           </p>
@@ -195,9 +195,9 @@ export function Products() {
           <CategoryCard key={category.id} category={category} />
         ))}
 
-        <div className="mt-6.5 text-center font-normal text-[13px] text-[#9A9A9A]">
+        <div className="mt-6.5 text-center font-normal text-[13px] text-fg-muted">
           Looking for something specific?{' '}
-          <a href="#contact" className="text-gold font-bold">
+          <a href="#contact" className="text-page-accent font-bold">
             Ask our supply desk →
           </a>
         </div>

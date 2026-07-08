@@ -154,18 +154,18 @@ export function Gallery() {
   }, [active]);
 
   return (
-    <section id="gallery" className="bg-ink sm:py-19.5">
+    <section id="gallery" className="bg-page sm:py-19.5">
       <div className="max-w-[1180px] mx-auto px-8">
         <div className="flex items-end justify-between gap-6 flex-wrap">
           <div>
-            <div className="font-mono font-semibold text-[12px] tracking-[3px] text-gold">
+            <div className="font-mono font-semibold text-[12px] tracking-[3px] text-page-accent">
               IN THE FIELD
             </div>
-            <h2 className="font-display text-[42px] text-white mt-3 tracking-[-0.5px]">
+            <h2 className="font-display text-[42px] text-fg mt-3 tracking-[-0.5px]">
               Product gallery
             </h2>
           </div>
-          <p className="font-normal text-[14px] leading-[1.65] text-[#B4B4B4] max-w-[380px] m-0">
+          <p className="font-normal text-[14px] leading-[1.65] text-fg-muted max-w-[380px] m-0">
             Drums, packaging, warehouse stock and applied results — drop your own photos into any
             tile below.
           </p>
@@ -186,7 +186,7 @@ export function Gallery() {
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/35 transition-colors flex items-end p-3.5 opacity-0 group-hover:opacity-100">
-                <span className="font-semibold text-[13px] text-white text-left">{tile.name}</span>
+                <span className="font-semibold text-[13px] text-white text-left drop-shadow">{tile.name}</span>
               </div>
             </button>
           ))}
@@ -203,7 +203,7 @@ export function Gallery() {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative bg-charcoal border border-white/10 rounded-2xl overflow-hidden max-w-[560px] w-full max-h-[90vh] flex flex-col"
+            className="relative bg-surface border border-surface-border rounded-2xl overflow-hidden max-w-[560px] w-full max-h-[90vh] flex flex-col"
           >
             <button
               type="button"
@@ -219,8 +219,8 @@ export function Gallery() {
               className="w-full max-h-[55vh] object-cover flex-none"
             />
             <div className="p-6">
-              <h3 className="font-display text-[22px] text-white m-0">{active.name}</h3>
-              <p className="font-normal text-[14px] leading-[1.6] text-[#B4B4B4] mt-2.5">
+              <h3 className="font-display text-[22px] text-fg m-0">{active.name}</h3>
+              <p className="font-normal text-[14px] leading-[1.6] text-fg-muted mt-2.5">
                 {active.info}
               </p>
               <a

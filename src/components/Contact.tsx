@@ -1,5 +1,7 @@
 import { MailIcon, PhoneIcon, WhatsAppIcon, PinIcon } from './icons';
 import blackEmblem from '../assets/logo/seyedro-icon-black.png';
+import goldEmblem from '../assets/logo/yellow-logo.png';
+import { useTheme } from '../context/ThemeContext';
 
 const cards: {
   href: string;
@@ -39,18 +41,21 @@ const cards: {
 ];
 
 export function Contact() {
+  const { theme } = useTheme();
+  const bannerIconSrc = theme === 'yellow' ? goldEmblem : blackEmblem;
+
   return (
-    <section id="contact" className="bg-charcoal text-white py-20 relative overflow-hidden">
-      <div className="absolute -right-35 -top-30 w-[480px] h-[480px] rounded-full bg-[radial-gradient(circle_at_42%_38%,rgba(254,207,9,0.10),transparent_62%)]" />
+    <section id="contact" className="bg-page-alt text-fg py-20 relative overflow-hidden">
+      <div className="absolute -right-35 -top-30 w-[480px] h-[480px] rounded-full bg-[radial-gradient(circle_at_42%_38%,var(--page-glow),transparent_62%)]" />
       <div className="max-w-[1180px] mx-auto px-8 relative">
         <div className="text-center">
-          <div className="font-mono font-semibold text-[12px] tracking-[3px] text-gold">
+          <div className="font-mono font-semibold text-[12px] tracking-[3px] text-page-accent">
             GET IN TOUCH
           </div>
-          <h2 className="font-display text-[32px] sm:text-[42px] text-white mt-3 tracking-[-0.5px] leading-[1.05]">
+          <h2 className="font-display text-[32px] sm:text-[42px] text-fg mt-3 tracking-[-0.5px] leading-[1.05]">
             Let&rsquo;s talk supply
           </h2>
-          <p className="font-normal text-[15px] leading-[1.7] text-[#B4B4B4] mt-3.5 mx-auto max-w-[520px]">
+          <p className="font-normal text-[15px] leading-[1.7] text-fg-muted mt-3.5 mx-auto max-w-[520px]">
             Send us your product list and quantities — our supply desk replies with pricing and
             availability. Reach us whichever way suits you.
           </p>
@@ -63,31 +68,31 @@ export function Contact() {
               href={href}
               target={href.startsWith('http') ? '_blank' : undefined}
               rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
-              className="flex-1 bg-[#1E1E1E] border border-gold/18 hover:border-gold hover:bg-[#242424] transition-colors rounded-2xl p-7 flex flex-col items-center text-center"
+              className="flex-1 bg-surface border border-surface-border hover:border-gold hover:bg-surface-alt transition-colors rounded-2xl p-7 flex flex-col items-center text-center"
             >
               <div className="w-14 h-14 rounded-full bg-gold flex items-center justify-center">
                 <Icon />
               </div>
-              <div className="font-mono font-semibold text-[10px] tracking-[2px] text-[#8A8A8A] mt-4.5">
+              <div className="font-mono font-semibold text-[10px] tracking-[2px] text-fg-muted mt-4.5">
                 {label}
               </div>
-              <div className="font-bold text-[16px] text-white mt-1.5 break-all">{value}</div>
-              <div className="font-semibold text-[12px] text-gold mt-3">{cta}</div>
+              <div className="font-bold text-[16px] text-fg mt-1.5 break-all">{value}</div>
+              <div className="font-semibold text-[12px] text-page-accent mt-3">{cta}</div>
             </a>
           ))}
         </div>
 
-        <div className="mt-6 bg-gold rounded-2xl px-8.5 py-6.5 flex items-center gap-6 flex-wrap">
-          <img src={blackEmblem} className="w-13.5 h-13.5 flex-none" alt="" />
+        <div className="mt-6 bg-cta rounded-2xl px-8.5 py-6.5 flex items-center gap-6 flex-wrap">
+          <img src={bannerIconSrc} className="w-13.5 h-13.5 flex-none" alt="" />
           <div className="flex-1 min-w-[220px]">
-            <div className="font-display text-[22px] text-ink">Ready to order?</div>
-            <div className="font-medium text-[13px] text-ink/70 mt-0.75">
+            <div className="font-display text-[22px] text-cta-fg">Ready to order?</div>
+            <div className="font-medium text-[13px] text-cta-fg/70 mt-0.75">
               Email your product list and quantities — we&rsquo;ll quote you fast.
             </div>
           </div>
           <a
             href="mailto:Roochyaruae@gmail.com?subject=Product%20Enquiry%20%E2%80%94%20Seyedro&body=Hello%20Seyedro%2C%0A%0AI%27d%20like%20a%20quote%20for%3A%0A-%20%0A%0AQuantity%3A%20%0ADelivery%20location%3A%20%0A%0AThank%20you."
-            className="font-extrabold text-[15px] text-gold bg-ink hover:bg-black transition-colors px-7.5 py-3.75 rounded-[9px]  text-center"
+            className="font-extrabold text-[15px] text-fg bg-page hover:opacity-90 transition-opacity px-7.5 py-3.75 rounded-[9px] text-center"
           >
             Email Your Enquiry
           </a>

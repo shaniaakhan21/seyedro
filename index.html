@@ -70,6 +70,16 @@
     </script>
   </head>
   <body>
+    <script>
+      (function () {
+        try {
+          var theme = localStorage.getItem('seyedro-theme');
+          if (theme === 'black') {
+            document.documentElement.setAttribute('data-theme', 'black');
+          }
+        } catch (e) {}
+      })();
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
