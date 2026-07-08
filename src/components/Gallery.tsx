@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { ImagePlaceholder } from './ImagePlaceholder';
 import { CloseIcon, WhatsAppIcon } from './icons';
 import paintBoxPhoto from '../assets/paint-box.png';
 import thinnerPhoto from '../assets/thinner.png';
@@ -9,6 +8,14 @@ import bodyFillerPhoto from '../assets/body-filler-putty.png';
 import goldPaintPhoto from '../assets/gold-paint-black-label.png';
 import woodFillerPhoto from '../assets/wood-filler-putty.png';
 import instantAdhesivePhoto from '../assets/instant-adhesive.png';
+import granitemarbleAdhesivePhoto from '../assets/granite-marble-adhesive.png';
+import blackBitumenPhoto from '../assets/black-bitumen.png';
+import siliconeSealantPhoto from '../assets/silicone-sealant.png';
+import bitumenEmulsionDrumsPhoto from '../assets/bitumen-emulsion-drums.png';
+import poolPaintPhoto from '../assets/pool-paint-image.png';
+import artistOilPaintPhoto from '../assets/artist-oil-paint.png';
+import wd40SprayPhoto from '../assets/wd-40-spray.png';
+import paintBrushesSetPhoto from '../assets/paint-brushes-set.png';
 
 const WHATSAPP_NUMBER = '971507671419';
 
@@ -50,7 +57,7 @@ const tiles = [
   },
   {
     id: 'gal-6',
-    span: 'col-span-2',
+    span: '',
     image: goldPaintPhoto,
     name: 'TIXE Gold Paint',
     info: 'Solvent-based gold paint for premium decorative and restoration work.',
@@ -68,6 +75,62 @@ const tiles = [
     image: instantAdhesivePhoto,
     name: 'Flex Kwik Instant Adhesive',
     info: 'Fast-setting instant adhesive built for flex bonding and PVC door assembly.',
+  },
+  {
+    id: 'gal-9',
+    span: '',
+    image: granitemarbleAdhesivePhoto,
+    name: 'Asmaco Granite & Marble Adhesive',
+    info: 'Professional-grade adhesive for bonding granite, marble and stone tiles, interior and exterior.',
+  },
+  {
+    id: 'gal-10',
+    span: '',
+    image: blackBitumenPhoto,
+    name: 'Delta Black Bitumen',
+    info: 'Penetration-grade bitumen for road repair and waterproofing applications.',
+  },
+  {
+    id: 'gal-11',
+    span: '',
+    image: siliconeSealantPhoto,
+    name: 'Asmaco GP Silicone Sealant',
+    info: 'Permanently flexible, UV-resistant silicone sealant for general building use.',
+  },
+  {
+    id: 'gal-12',
+    span: '',
+    image: bitumenEmulsionDrumsPhoto,
+    name: 'Aslycoat Cold-Applied Bitumen Emulsion',
+    info: 'Cold-applied bitumen emulsion for roofing and waterproofing, stocked by the drum.',
+  },
+  {
+    id: 'gal-13',
+    span: 'row-span-2',
+    image: poolPaintPhoto,
+    name: 'Isomer Epoxy Pool Paint',
+    info: 'Heavy-duty epoxy coating built for swimming pools — strong adhesion, chemical and water resistant.',
+  },
+  {
+    id: 'gal-14',
+    span: '',
+    image: artistOilPaintPhoto,
+    name: "Marie's Oil Colour Set",
+    info: 'Artist-grade oil colour tubes, available alongside our specialist coatings range.',
+  },
+  {
+    id: 'gal-15',
+    span: '',
+    image: wd40SprayPhoto,
+    name: 'WD-40 Multi-Use Product',
+    info: 'Multi-use maintenance spray for the workshop and warehouse floor.',
+  },
+  {
+    id: 'gal-16',
+    span: '',
+    image: paintBrushesSetPhoto,
+    name: 'Detail Paint Brush Set',
+    info: 'Nylon-bristle brush set for fine finishing and touch-up work.',
   },
 ];
 
@@ -108,33 +171,25 @@ export function Gallery() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 auto-rows-[200px] gap-3.5 mt-8.5">
-          {tiles.map((tile, i) =>
-            tile.image ? (
-              <button
-                key={tile.id}
-                type="button"
-                onClick={() => setActiveIndex(i)}
-                aria-label={`View ${tile.name}`}
-                className={`group relative w-full h-full overflow-hidden rounded-xl cursor-pointer ${tile.span}`}
-              >
-                <img
-                  src={tile.image}
-                  alt={tile.name}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/35 transition-colors flex items-end p-3.5 opacity-0 group-hover:opacity-100">
-                  <span className="font-semibold text-[13px] text-white text-left">{tile.name}</span>
-                </div>
-              </button>
-            ) : (
-              <ImagePlaceholder
-                key={tile.id}
-                label="Photo"
-                className={`w-full h-full ${tile.span}`}
+        <div className="grid grid-cols-2 sm:grid-cols-4 auto-rows-[200px] grid-flow-dense gap-3.5 mt-8.5">
+          {tiles.map((tile, i) => (
+            <button
+              key={tile.id}
+              type="button"
+              onClick={() => setActiveIndex(i)}
+              aria-label={`View ${tile.name}`}
+              className={`group relative w-full h-full overflow-hidden rounded-xl cursor-pointer ${tile.span}`}
+            >
+              <img
+                src={tile.image}
+                alt={tile.name}
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
-            ),
-          )}
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/35 transition-colors flex items-end p-3.5 opacity-0 group-hover:opacity-100">
+                <span className="font-semibold text-[13px] text-white text-left">{tile.name}</span>
+              </div>
+            </button>
+          ))}
         </div>
       </div>
 
