@@ -130,14 +130,14 @@ function CategoryCard({ category }: { category: Category }) {
     </div>
   );
   const productGrid = (
-    <div className="flex-1 grid grid-cols-[repeat(auto-fill,minmax(172px,1fr))] gap-2.5 content-start p-5.5">
+    <div className="flex-1 grid grid-cols-2 sm:grid-cols-[repeat(auto-fill,minmax(172px,1fr))] gap-2 sm:gap-2.5 content-start p-4 sm:p-5.5">
       {category.products.map((p) => (
         <div
           key={p}
-          className="flex items-center gap-2.75 px-3.75 py-3.25 bg-[#1A1A1A] border border-white/10 rounded-[9px] hover:border-gold hover:bg-[#222222] transition-colors"
+          className="flex items-center gap-2 sm:gap-2.75 px-2.5 sm:px-3.75 py-2.5 sm:py-3.25 bg-[#1A1A1A] border border-white/10 rounded-[9px] hover:border-gold hover:bg-[#222222] transition-colors"
         >
           <span className="w-2 h-2 rounded-sm bg-gold flex-none rotate-45" />
-          <span className="font-semibold text-[13.5px] text-white">{p}</span>
+          <span className="font-semibold text-[12px] sm:text-[13.5px] text-white">{p}</span>
         </div>
       ))}
     </div>
@@ -148,18 +148,18 @@ function CategoryCard({ category }: { category: Category }) {
       id={category.id}
       className="bg-charcoal border border-white/10 rounded-2xl overflow-hidden mt-4.5 first:mt-8.5"
     >
-      <div className="flex items-center gap-4.5 px-7 py-5.5 border-b border-white/10">
-        <div className="w-14 h-14 rounded-full bg-ink flex items-center justify-center flex-none">
+      <div className="flex flex-wrap sm:flex-nowrap items-center gap-4.5 px-7 py-5.5 border-b border-white/10">
+        <div className="order-1 w-14 h-14 rounded-full bg-ink flex items-center justify-center flex-none">
           <Icon />
         </div>
-        <div className="flex-1">
+        <div className="order-2 sm:order-3 ml-auto sm:ml-0 flex-none font-bold text-[11px] tracking-[1px] text-ink bg-gold px-3.25 py-1.75 rounded-full whitespace-nowrap">
+          {category.count} PRODUCTS
+        </div>
+        <div className="order-3 sm:order-2 w-full sm:w-auto sm:flex-1">
           <h3 className="font-display text-[21px] text-white m-0">{category.title}</h3>
           <p className="font-normal text-[12.5px] leading-[1.5] text-[#9A9A9A] mt-1 max-w-[560px]">
             {category.description}
           </p>
-        </div>
-        <div className="flex-none font-bold text-[11px] tracking-[1px] text-ink bg-gold px-3.25 py-1.75 rounded-full whitespace-nowrap">
-          {category.count} PRODUCTS
         </div>
       </div>
       <div className={`flex flex-col ${category.imageFirst ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
@@ -172,14 +172,14 @@ function CategoryCard({ category }: { category: Category }) {
 
 export function Products() {
   return (
-    <section id="products" className="bg-ink py-19.5">
+    <section id="products" className="bg-ink py-12 sm:py-19.5">
       <div className="max-w-[1180px] mx-auto px-8">
         <div className="flex items-end justify-between gap-6 flex-wrap">
           <div>
             <div className="font-mono font-semibold text-[12px] tracking-[3px] text-gold">
               WHAT WE SUPPLY
             </div>
-            <h2 className="font-display text-[42px] text-white mt-3 tracking-[-0.5px]">
+            <h2 className="font-display text-4xl sm:text-[42px] text-white mt-3 tracking-[-0.5px]">
               Our product range
             </h2>
           </div>

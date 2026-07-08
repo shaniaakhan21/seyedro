@@ -87,7 +87,7 @@ export function Contact() {
           </div>
           <a
             href="mailto:Roochyaruae@gmail.com?subject=Product%20Enquiry%20%E2%80%94%20Seyedro&body=Hello%20Seyedro%2C%0A%0AI%27d%20like%20a%20quote%20for%3A%0A-%20%0A%0AQuantity%3A%20%0ADelivery%20location%3A%20%0A%0AThank%20you."
-            className="font-extrabold text-[15px] text-gold bg-ink hover:bg-black transition-colors px-7.5 py-3.75 rounded-[9px]"
+            className="font-extrabold text-[15px] text-gold bg-ink hover:bg-black transition-colors px-7.5 py-3.75 rounded-[9px]  text-center"
           >
             Email Your Enquiry
           </a>

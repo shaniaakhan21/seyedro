@@ -91,7 +91,7 @@ export function Gallery() {
   }, [active]);
 
   return (
-    <section id="gallery" className="bg-ink py-19.5">
+    <section id="gallery" className="bg-ink sm:py-19.5">
       <div className="max-w-[1180px] mx-auto px-8">
         <div className="flex items-end justify-between gap-6 flex-wrap">
           <div>

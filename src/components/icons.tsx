@@ -139,3 +139,11 @@ export function CloseIcon({ size = 22, stroke = '#fff' }: IconProps) {
     </svg>
   );
 }
+
+export function MenuIcon({ size = 26, stroke = '#fff' }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={stroke} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M4 7h16M4 12h16M4 17h16" />
+    </svg>
+  );
+}

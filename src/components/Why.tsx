@@ -21,13 +21,13 @@ const reasons: { icon: ComponentType<{ size?: number; stroke?: string }>; title:
 
 export function Why() {
   return (
-    <section id="why" className="bg-gold py-19.5">
+    <section id="why" className="bg-gold py-8 sm:py-19.5">
       <div className="max-w-[1180px] mx-auto px-8">
         <div className="text-center">
           <div className="font-mono font-semibold text-[12px] tracking-[3px] text-ink/70">
             WHY SEYEDRO
           </div>
-          <h2 className="font-display text-[40px] text-ink mt-3 tracking-[-0.5px]">
+          <h2 className="font-display text-4xl sm:text-[40px] text-ink mt-3 tracking-[-0.5px]">
             Built for the trade
           </h2>
         </div>
