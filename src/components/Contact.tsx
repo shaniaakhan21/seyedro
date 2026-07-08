@@ -1,4 +1,5 @@
 import { MailIcon, PhoneIcon, WhatsAppIcon, PinIcon } from './icons';
+import blackEmblem from '../assets/logo/seyedro-icon-black.png';
 
 const cards: {
   href: string;
@@ -77,7 +78,7 @@ export function Contact() {
         </div>
 
         <div className="mt-6 bg-gold rounded-2xl px-8.5 py-6.5 flex items-center gap-6 flex-wrap">
-          <img src="/seyedro-emblem-icon.png" className="w-13.5 h-13.5 flex-none" alt="" />
+          <img src={blackEmblem} className="w-13.5 h-13.5 flex-none" alt="" />
           <div className="flex-1 min-w-[220px]">
             <div className="font-display text-[22px] text-ink">Ready to order?</div>
             <div className="font-medium text-[13px] text-ink/70 mt-0.75">

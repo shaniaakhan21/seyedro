@@ -11,7 +11,7 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-[#0A0A0A]/96 backdrop-blur-sm border-b border-gold/18">
       <div className="max-w-[1180px] mx-auto px-8 py-3.5 flex items-center gap-4.5">
         <a href="#top" className="flex items-center gap-3">
-          <img src="/seyedro-emblem-icon.png" alt="Seyedro" className="w-16 h-16" />
+          <img src="/yellow-logo.png" alt="Seyedro" className="w-16 h-16" />
           <div className="leading-none">
             <div className="font-display text-[19px] text-white tracking-[0.5px]">SEYEDRO</div>
             <div className="font-condensed font-bold text-[7px] tracking-[3px] text-gold mt-0.5">

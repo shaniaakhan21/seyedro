@@ -21,7 +21,7 @@ export function Footer() {
         <div className="flex gap-12.5 flex-wrap">
           <div className="flex-[1.4] min-w-[260px]">
             <div className="flex items-center gap-3">
-              <img src="/seyedro-emblem-icon.png" className="w-24 h-24" alt="Seyedro" />
+              <img src="/yellow-logo.png" className="w-24 h-24" alt="Seyedro" />
               <div>
                 <div className="font-display text-[20px] text-white">SEYEDRO</div>
                 <div className="font-condensed font-bold text-[7px] tracking-[3px] text-gold mt-0.5">
