@@ -5,6 +5,7 @@ import thinnerPhoto from '../assets/thinner.png';
 import granitemarbleAdhesivePhoto from '../assets/granite-marble-adhesive.png';
 import blackBitumenPhoto from '../assets/black-bitumen.png';
 import siliconeSealantPhoto from '../assets/silicone-sealant.png';
+import poolPaintPhoto from '../assets/pool-paint-image.png';
 import {
   PaintIcon,
   ResinIcon,
@@ -106,6 +107,7 @@ const categories: Category[] = [
     description: 'Specialist pool coatings, waterstops, injection resins and sealants.',
     count: 7,
     imageLabel: 'Pool systems photo',
+    image: poolPaintPhoto,
     imageFirst: false,
     products: [
       'Epoxy Pool Paint', 'PU Waterproof Coating', 'PVC Waterstop', 'Bentonite Waterstop',
