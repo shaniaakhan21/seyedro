@@ -19,7 +19,7 @@ export function About() {
           <div className="absolute right-[-18px] bottom-[-22px] bg-surface border border-surface-border rounded-xl px-5.5 py-4.5 flex items-center gap-3.5 shadow-[0_12px_30px_rgba(0,0,0,0.4)]">
             <img src={badgeIconSrc} className="w-10 h-10" alt="" />
             <div>
-              <div className="font-display text-[15px] text-fg">Dubai, UAE</div>
+              <div className="font-display text-[15px] text-fg">Dubai, Sharjah</div>
               <div className="font-mono font-medium text-[10px] tracking-[1px] text-fg-muted mt-0.5">
                 HEAD OFFICE
               </div>

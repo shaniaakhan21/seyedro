@@ -35,7 +35,7 @@ const cards: {
     href: 'https://www.seyedro.com',
     icon: () => <PinIcon stroke="#ffffff" />,
     label: 'VISIT US',
-    value: 'Dubai, UAE',
+    value: 'Dubai, Sharjah',
     cta: 'www.seyedro.com →',
   },
 ];
