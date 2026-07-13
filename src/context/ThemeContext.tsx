@@ -14,16 +14,16 @@ interface ThemeContextValue {
 const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
 
 function getInitialTheme(): Theme {
-  if (typeof window === 'undefined') return 'yellow';
+  if (typeof window === 'undefined') return 'navy';
   const stored = localStorage.getItem(STORAGE_KEY);
-  return THEMES.includes(stored as Theme) ? (stored as Theme) : 'yellow';
+  return THEMES.includes(stored as Theme) ? (stored as Theme) : 'navy';
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<Theme>(getInitialTheme);
 
   useEffect(() => {
-    if (theme === 'yellow') {
+    if (theme === 'navy') {
       document.documentElement.removeAttribute('data-theme');
     } else {
       document.documentElement.setAttribute('data-theme', theme);
