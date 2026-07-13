@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { CloseIcon, MenuIcon } from './icons';
 import { useTheme, type Theme } from '../context/ThemeContext';
 import goldIcon from '../assets/logo/yellow-logo.png';
-import blackIcon from '../assets/logo/seyedro-icon-black.png';
+import blackIcon from '../assets/logo/orange-logo-seyedro.png';
 
 const navLinks = [
   { href: '#products', label: 'Products' },
@@ -62,7 +62,7 @@ export function Header() {
           <a href="#top" className="flex items-center gap-3" onClick={() => setMenuOpen(false)}>
             <img src={logoSrc} alt="Seyedro" className="w-12 h-12 sm:w-16 sm:h-16" />
             <div className="leading-none">
-              <div className="font-display text-[16px] sm:text-[19px] text-blackfg tracking-[0.5px]">
+              <div className="font-display text-[16px] sm:text-[19px] text-black tracking-[0.5px]">
                 SEYEDRO
               </div>
               <div className="font-condensed font-bold text-[7px] tracking-[3px] text-black mt-0.5">
