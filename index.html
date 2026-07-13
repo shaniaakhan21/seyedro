@@ -74,8 +74,8 @@
       (function () {
         try {
           var theme = localStorage.getItem('seyedro-theme');
-          if (theme === 'black') {
-            document.documentElement.setAttribute('data-theme', 'black');
+          if (theme === 'black' || theme === 'navy') {
+            document.documentElement.setAttribute('data-theme', theme);
           }
         } catch (e) {}
       })();

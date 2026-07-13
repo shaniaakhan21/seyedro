@@ -23,6 +23,7 @@
   --color-surface: var(--surface);
   --color-surface-alt: var(--surface-alt);
   --color-surface-border: var(--surface-border);
+  --color-brand-accent: var(--brand-accent);
 }
 
 :root {
@@ -39,6 +40,7 @@
   --surface-alt: #ffe873;
   --surface-border: rgba(10, 10, 10, 0.15);
   --page-glow: rgba(10, 10, 10, 0.1);
+  --brand-accent: #fed109;
 }
 
 :root[data-theme='black'] {
@@ -55,6 +57,24 @@
   --surface-alt: #1e1e1e;
   --surface-border: rgba(255, 255, 255, 0.1);
   --page-glow: rgba(254, 207, 9, 0.16);
+  --brand-accent: #fed109;
+}
+
+:root[data-theme='navy'] {
+  --page: #ffffff;
+  --page-alt: #eef2f8;
+  --fg: #0b1e3d;
+  --fg-muted: #5a6b85;
+  --fg-faint: #8a97ac;
+  --page-accent: #69D4FF;
+  --page-border: rgba(21, 147, 194, 0.3);
+  --cta: #ff7a1a;
+  --cta-fg: #ffffff;
+  --surface: #f4f7fb;
+  --surface-alt: #e9eff6;
+  --surface-border: rgba(11, 30, 61, 0.12);
+  --page-glow: rgba(21, 147, 194, 0.14);
+  --brand-accent: #69D4FF;
 }
 
 @layer base {

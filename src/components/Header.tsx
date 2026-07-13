@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { CloseIcon, MenuIcon } from './icons';
-import { useTheme } from '../context/ThemeContext';
+import { useTheme, type Theme } from '../context/ThemeContext';
 import goldIcon from '../assets/logo/yellow-logo.png';
 import blackIcon from '../assets/logo/seyedro-icon-black.png';
 
@@ -12,24 +12,33 @@ const navLinks = [
   { href: '#contact', label: 'Contact' },
 ];
 
+const THEME_OPTIONS: { value: Theme; label: string; swatch: string }[] = [
+  { value: 'yellow', label: 'Yellow', swatch: '#fed109' },
+  { value: 'black', label: 'Black', swatch: '#0a0a0a' },
+  { value: 'navy', label: 'Navy', swatch: '#0b1e3d' },
+];
+
 function ThemeToggle({ className = '' }: { className?: string }) {
-  const { theme, toggleTheme } = useTheme();
-  const nextLabel = theme === 'yellow' ? 'Black' : 'Yellow';
+  const { theme, setTheme } = useTheme();
 
   return (
-    <button
-      type="button"
-      onClick={toggleTheme}
-      aria-label={`Switch to ${nextLabel.toLowerCase()} theme`}
-      className={`flex items-center gap-2 border border-page-border rounded-full pl-2.5 pr-3.5 py-1.5 flex-none ${className}`}
+    <div
+      className={`flex items-center gap-1.5 border border-page-border rounded-full p-1.5 flex-none ${className}`}
     >
-      <span
-        className={`w-3.5 h-3.5 rounded-full flex-none ${theme === 'yellow' ? 'bg-ink' : 'bg-gold'}`}
-      />
-      <span className="font-mono font-semibold text-[11px] tracking-[1px] text-fg">
-        {nextLabel}
-      </span>
-    </button>
+      {THEME_OPTIONS.map((opt) => (
+        <button
+          key={opt.value}
+          type="button"
+          onClick={() => setTheme(opt.value)}
+          aria-label={`Switch to ${opt.label.toLowerCase()} theme`}
+          aria-pressed={theme === opt.value}
+          className={`w-5.5 h-5.5 rounded-full flex-none transition-all ${
+            theme === opt.value ? 'ring-2 ring-page-accent ring-offset-2 ring-offset-page' : 'opacity-70 hover:opacity-100'
+          }`}
+          style={{ backgroundColor: opt.swatch }}
+        />
+      ))}
+    </div>
   );
 }
 
@@ -53,10 +62,10 @@ export function Header() {
           <a href="#top" className="flex items-center gap-3" onClick={() => setMenuOpen(false)}>
             <img src={logoSrc} alt="Seyedro" className="w-12 h-12 sm:w-16 sm:h-16" />
             <div className="leading-none">
-              <div className="font-display text-[16px] sm:text-[19px] text-fg tracking-[0.5px]">
+              <div className="font-display text-[16px] sm:text-[19px] text-blackfg tracking-[0.5px]">
                 SEYEDRO
               </div>
-              <div className="font-condensed font-bold text-[7px] tracking-[3px] text-page-accent mt-0.5">
+              <div className="font-condensed font-bold text-[7px] tracking-[3px] text-black mt-0.5">
                 RAW MATERIALS TRADING LLC
               </div>
             </div>

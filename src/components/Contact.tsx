@@ -12,28 +12,28 @@ const cards: {
 }[] = [
   {
     href: 'mailto:Roochyaruae@gmail.com?subject=Product%20Enquiry%20%E2%80%94%20Seyedro&body=Hello%20Seyedro%2C%0A%0AI%27d%20like%20a%20quote%20for%3A%0A-%20%0A%0AQuantity%3A%20%0ADelivery%20location%3A%20%0A%0AThank%20you.',
-    icon: () => <MailIcon />,
+    icon: () => <MailIcon stroke="#ffffff" />,
     label: 'EMAIL US',
     value: 'Roochyaruae@gmail.com',
     cta: 'Send an email →',
   },
   {
     href: 'tel:+971507671419',
-    icon: () => <PhoneIcon />,
+    icon: () => <PhoneIcon stroke="#ffffff" />,
     label: 'CALL US',
     value: '+971 50 767 1419',
     cta: 'Tap to call →',
   },
   {
     href: `https://wa.me/971507671419?text=${encodeURIComponent("Hi Seyedro, I'd like to know more about your products and pricing.")}`,
-    icon: () => <WhatsAppIcon size={27} fill="#0A0A0A" />,
+    icon: () => <WhatsAppIcon size={27} fill="#ffffff" />,
     label: 'WHATSAPP',
     value: 'Chat with us',
     cta: 'Open WhatsApp →',
   },
   {
     href: 'https://www.seyedro.com',
-    icon: () => <PinIcon />,
+    icon: () => <PinIcon stroke="#ffffff" />,
     label: 'VISIT US',
     value: 'Dubai, UAE',
     cta: 'www.seyedro.com →',
@@ -45,17 +45,17 @@ export function Contact() {
   const bannerIconSrc = theme === 'yellow' ? goldEmblem : blackEmblem;
 
   return (
-    <section id="contact" className="bg-page-alt text-fg py-20 relative overflow-hidden">
-      <div className="absolute -right-35 -top-30 w-[480px] h-[480px] rounded-full bg-[radial-gradient(circle_at_42%_38%,var(--page-glow),transparent_62%)]" />
+    <section id="contact" className="bg-[#0b1e3d] py-20 relative overflow-hidden">
+      <div className="absolute -right-35 -top-30 w-[480px] h-[480px] rounded-full bg-[radial-gradient(circle_at_42%_38%,rgba(105,212,255,0.14),transparent_62%)]" />
       <div className="max-w-[1180px] mx-auto px-8 relative">
         <div className="text-center">
-          <div className="font-mono font-semibold text-[12px] tracking-[3px] text-page-accent">
+          <div className="font-mono font-semibold text-[12px] tracking-[3px] text-[#69D4FF]">
             GET IN TOUCH
           </div>
-          <h2 className="font-display text-[32px] sm:text-[42px] text-fg mt-3 tracking-[-0.5px] leading-[1.05]">
+          <h2 className="font-display text-[32px] sm:text-[42px] text-white mt-3 tracking-[-0.5px] leading-[1.05]">
             Let&rsquo;s talk supply
           </h2>
-          <p className="font-normal text-[15px] leading-[1.7] text-fg-muted mt-3.5 mx-auto max-w-[520px]">
+          <p className="font-normal text-[15px] leading-[1.7] text-white/60 mt-3.5 mx-auto max-w-[520px]">
             Send us your product list and quantities — our supply desk replies with pricing and
             availability. Reach us whichever way suits you.
           </p>
@@ -68,16 +68,16 @@ export function Contact() {
               href={href}
               target={href.startsWith('http') ? '_blank' : undefined}
               rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
-              className="flex-1 bg-surface border border-surface-border hover:border-gold hover:bg-surface-alt transition-colors rounded-2xl p-7 flex flex-col items-center text-center"
+              className="flex-1 bg-white/5 border border-white/10 hover:border-[#69D4FF] hover:bg-white/10 transition-colors rounded-2xl p-7 flex flex-col items-center text-center"
             >
-              <div className="w-14 h-14 rounded-full bg-gold flex items-center justify-center">
+              <div className="w-14 h-14 rounded-full bg-[#FF7A1A] flex items-center justify-center">
                 <Icon />
               </div>
-              <div className="font-mono font-semibold text-[10px] tracking-[2px] text-fg-muted mt-4.5">
+              <div className="font-mono font-semibold text-[10px] tracking-[2px] text-white/50 mt-4.5">
                 {label}
               </div>
-              <div className="font-bold text-[16px] text-fg mt-1.5 break-all">{value}</div>
-              <div className="font-semibold text-[12px] text-page-accent mt-3">{cta}</div>
+              <div className="font-bold text-[16px] text-white mt-1.5 break-all">{value}</div>
+              <div className="font-semibold text-[12px] text-[#69D4FF] mt-3">{cta}</div>
             </a>
           ))}
         </div>

@@ -41,7 +41,7 @@ export function GlobeIcon({ size = 26, stroke = '#0A0A0A' }: IconProps) {
   );
 }
 
-export function PaintIcon({ size = 28, stroke = '#FED109' }: IconProps) {
+export function PaintIcon({ size = 28, stroke = 'var(--brand-accent)' }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={stroke} strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
       <rect x="3" y="4" width="13" height="6" rx="1.2" />
@@ -51,7 +51,7 @@ export function PaintIcon({ size = 28, stroke = '#FED109' }: IconProps) {
   );
 }
 
-export function ResinIcon({ size = 28, stroke = '#FED109' }: IconProps) {
+export function ResinIcon({ size = 28, stroke = 'var(--brand-accent)' }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={stroke} strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
       <path d="M9 3h6" />
@@ -61,7 +61,7 @@ export function ResinIcon({ size = 28, stroke = '#FED109' }: IconProps) {
   );
 }
 
-export function ThinnerIcon({ size = 28, stroke = '#FED109' }: IconProps) {
+export function ThinnerIcon({ size = 28, stroke = 'var(--brand-accent)' }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={stroke} strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
       <path d="M8 2h8" />
@@ -71,7 +71,7 @@ export function ThinnerIcon({ size = 28, stroke = '#FED109' }: IconProps) {
   );
 }
 
-export function BitumenIcon({ size = 28, stroke = '#FED109' }: IconProps) {
+export function BitumenIcon({ size = 28, stroke = 'var(--brand-accent)' }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={stroke} strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
       <path d="M12 3s5.5 6 5.5 10A5.5 5.5 0 0 1 6.5 13C6.5 9 12 3 12 3Z" />
@@ -79,7 +79,7 @@ export function BitumenIcon({ size = 28, stroke = '#FED109' }: IconProps) {
   );
 }
 
-export function WaterproofIcon({ size = 28, stroke = '#FED109' }: IconProps) {
+export function WaterproofIcon({ size = 28, stroke = 'var(--brand-accent)' }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={stroke} strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
       <path d="M12 3l7 2.6v5.4c0 4.4-3 6.9-7 8.4-4-1.5-7-4-7-8.4V5.6z" />
@@ -88,7 +88,7 @@ export function WaterproofIcon({ size = 28, stroke = '#FED109' }: IconProps) {
   );
 }
 
-export function PoolIcon({ size = 28, stroke = '#FED109' }: IconProps) {
+export function PoolIcon({ size = 28, stroke = 'var(--brand-accent)' }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={stroke} strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
       <path d="M3 8c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0" />

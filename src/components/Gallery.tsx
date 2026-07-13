@@ -16,6 +16,15 @@ import poolPaintPhoto from '../assets/pool-paint-image.png';
 import artistOilPaintPhoto from '../assets/artist-oil-paint.png';
 import wd40SprayPhoto from '../assets/wd-40-spray.png';
 import paintBrushesSetPhoto from '../assets/paint-brushes-set.png';
+import jotunWonderwallLuxPhoto from '../assets/jotun-wonderwall-lux-paint.png';
+import jotunFenomasticEpoxyPhoto from '../assets/jotun-fenomastic-epoxy-paint.png';
+import jotunRoadMarkingPhoto from '../assets/jotun-road-marking-paint.png';
+import jotunFenomasticPureColoursPhoto from '../assets/jotun-fenomastic-pure-colours-paint.png';
+import langlowStripperPhoto from '../assets/langlow-paint-varnish-stripper.png';
+import langlowTurpentinePhoto from '../assets/langlow-turpentine-substitute.png';
+import cleaningSpiritPhoto from '../assets/cleaning-spirit.png';
+import puttyKnifePhoto from '../assets/putty-knife-joint-compound.png';
+import langlowTeakOilPhoto from '../assets/langlow-teak-oil.png';
 
 const WHATSAPP_NUMBER = '971507671419';
 
@@ -132,6 +141,69 @@ const tiles = [
     name: 'Detail Paint Brush Set',
     info: 'Nylon-bristle brush set for fine finishing and touch-up work.',
   },
+  {
+    id: 'gal-17',
+    span: 'row-span-2',
+    image: jotunWonderwallLuxPhoto,
+    name: 'Jotun Wonderwall Lux Fenomastic',
+    info: 'Premium interior wall finish with a smooth matt finish and long-lasting colour.',
+  },
+  {
+    id: 'gal-18',
+    span: '',
+    image: jotunFenomasticEpoxyPhoto,
+    name: 'Jotun Fenomastic 85 Epoxy Paint',
+    info: 'Two-component epoxy coating built for heavy-duty, chemical-resistant surfaces.',
+  },
+  {
+    id: 'gal-19',
+    span: 'col-span-2',
+    image: jotunRoadMarkingPhoto,
+    name: 'Jotun Road Marking Paint',
+    info: 'Fast-drying, reflective road marking paint for lane lines and traffic surfaces.',
+  },
+  {
+    id: 'gal-20',
+    span: '',
+    image: jotunFenomasticPureColoursPhoto,
+    name: 'Jotun Fenomastic Pure Colours',
+    info: 'Solvent-borne enamel interior paint with superior coverage and washability.',
+  },
+  {
+    id: 'gal-21',
+    span: '',
+    image: langlowStripperPhoto,
+    name: 'Langlow Paint & Varnish Stripper',
+    info: 'All-purpose stripper for quick, water-washable removal of old paint and varnish.',
+  },
+  {
+    id: 'gal-22',
+    span: '',
+    image: langlowTurpentinePhoto,
+    name: 'Langlow Turpentine Substitute',
+    info: 'Brush cleaner, oil stain remover and degreaser for everyday site use.',
+  },
+  {
+    id: 'gal-23',
+    span: '',
+    image: cleaningSpiritPhoto,
+    name: 'White Spirit',
+    info: 'General-purpose cleaning spirit for thinning, degreasing and brush cleaning.',
+  },
+  {
+    id: 'gal-24',
+    span: '',
+    image: puttyKnifePhoto,
+    name: 'Putty & Joint Compound',
+    info: 'Ready-mixed joint compound with a stainless-steel putty knife for smooth application.',
+  },
+  {
+    id: 'gal-25',
+    span: '',
+    image: langlowTeakOilPhoto,
+    name: 'Langlow Teak Oil',
+    info: 'Nourishing teak oil finish for protecting and enriching timber surfaces.',
+  },
 ];
 
 export function Gallery() {
@@ -154,19 +226,19 @@ export function Gallery() {
   }, [active]);
 
   return (
-    <section id="gallery" className="bg-page sm:py-19.5">
+    <section id="gallery" className="bg-[#FF7A1A] sm:py-19.5">
       <div className="max-w-[1180px] mx-auto px-8">
         <div className="flex items-end justify-between gap-6 flex-wrap">
           <div>
-            <div className="font-mono font-semibold text-[12px] tracking-[3px] text-page-accent">
+            <div className="font-mono font-semibold text-[12px] tracking-[3px] text-black">
               IN THE FIELD
             </div>
-            <h2 className="font-display text-[42px] text-fg mt-3 tracking-[-0.5px]">
+            <h2 className="font-display text-[42px] text-white mt-3 tracking-[-0.5px]">
               Product gallery
             </h2>
           </div>
-          <p className="font-normal text-[14px] leading-[1.65] text-fg-muted max-w-[380px] m-0">
-            Drums, packaging, warehouse stock and applied results — drop your own photos into any
+          <p className="font-normal text-[14px] leading-[1.65] text-white max-w-[380px] m-0">
+            Drums, packaging, warehouse stock and applied results <br></br>— drop your own photos into any
             tile below.
           </p>
         </div>
@@ -229,7 +301,7 @@ export function Gallery() {
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-5 inline-flex items-center gap-2.5 font-bold text-[14px] text-ink bg-gold hover:opacity-90 transition-opacity px-6 py-3 rounded-lg"
+                className="mt-5 inline-flex items-center gap-2.5 font-bold text-[14px] text-ink bg-brand-accent hover:opacity-90 transition-opacity px-6 py-3 rounded-lg"
               >
                 <WhatsAppIcon size={18} fill="#0A0A0A" />
                 Interested? Get in touch

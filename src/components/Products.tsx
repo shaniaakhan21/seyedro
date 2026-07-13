@@ -23,7 +23,6 @@ interface Category {
   count: number;
   imageLabel: string;
   image?: string;
-  imageFirst: boolean;
   products: string[];
 }
 
@@ -36,7 +35,6 @@ const categories: Category[] = [
     count: 12,
     imageLabel: 'Paints photo',
     image: paintBoxPhoto,
-    imageFirst: true,
     products: [
       'Acrylic Emulsion Paint', 'Vinyl Paint', 'Latex Paint', 'Interior Paint', 'Exterior Paint',
       'Texture Paint', 'Primer Paint', 'Putty', 'Epoxy Paint', 'Polyurethane Paint',
@@ -51,7 +49,6 @@ const categories: Category[] = [
     count: 9,
     imageLabel: 'Resins photo',
     image: granitemarbleAdhesivePhoto,
-    imageFirst: false,
     products: [
       'Acrylic Resin', 'Styrene Acrylic Resin', 'Pure Acrylic Resin', 'Epoxy Resin',
       'Polyurethane Resin', 'Polyester Resin', 'Vinyl Ester Resin', 'Alkyd Resin', 'Silicone Resin',
@@ -65,7 +62,6 @@ const categories: Category[] = [
     count: 9,
     imageLabel: 'Thinners photo',
     image: thinnerPhoto,
-    imageFirst: true,
     products: [
       'Thinner 1000', 'Thinner 2000', 'Thinner 5000', 'Thinner 10000', 'Xylene',
       'Toluene', 'White Spirit', 'Acetone', 'MEK',
@@ -79,7 +75,6 @@ const categories: Category[] = [
     count: 8,
     imageLabel: 'Bitumen photo',
     image: blackBitumenPhoto,
-    imageFirst: false,
     products: [
       'Bitumen 40/50', 'Bitumen 60/70', 'Bitumen 80/100', 'Oxidized Bitumen 85/25',
       'Oxidized Bitumen 90/15', 'Bitumen Emulsion', 'APP Membrane', 'SBS Membrane',
@@ -93,7 +88,6 @@ const categories: Category[] = [
     count: 7,
     imageLabel: 'Waterproofing photo',
     image: siliconeSealantPhoto,
-    imageFirst: true,
     products: [
       'Acrylic Waterproof Coating', 'Elastomeric Waterproof Coating', 'Polyurethane Waterproof Coating',
       'Epoxy Waterproof Coating', 'Cementitious Waterproofing 1K', 'Cementitious Waterproofing 2K',
@@ -108,7 +102,6 @@ const categories: Category[] = [
     count: 7,
     imageLabel: 'Pool systems photo',
     image: poolPaintPhoto,
-    imageFirst: false,
     products: [
       'Epoxy Pool Paint', 'PU Waterproof Coating', 'PVC Waterstop', 'Bentonite Waterstop',
       'PU Injection Resin', 'Epoxy Injection Resin', 'Pool Sealants',
@@ -119,26 +112,26 @@ const categories: Category[] = [
 function CategoryCard({ category }: { category: Category }) {
   const Icon = category.icon;
   const image = (
-    <div className="flex-none w-full md:w-60 self-stretch">
+    <div className="flex-none w-full h-48 sm:w-40 sm:h-auto">
       {category.image ? (
         <img
           src={category.image}
           alt={category.imageLabel}
-          className="w-full h-full min-h-[200px] object-cover"
+          className="w-full h-full rounded-2xl object-cover"
         />
       ) : (
-        <ImagePlaceholder label={category.imageLabel} rounded={false} className="w-full h-full min-h-[200px]" />
+        <ImagePlaceholder label={category.imageLabel} rounded={false} className="w-full h-full rounded-2xl" />
       )}
     </div>
   );
   const productGrid = (
-    <div className="flex-1 grid grid-cols-2 sm:grid-cols-[repeat(auto-fill,minmax(172px,1fr))] gap-2 sm:gap-2.5 content-start p-4 sm:p-5.5">
+    <div className="grid grid-cols-2 sm:grid-cols-[repeat(auto-fill,minmax(172px,1fr))] gap-2 sm:gap-2.5 mt-5">
       {category.products.map((p) => (
         <div
           key={p}
-          className="flex items-center gap-2 sm:gap-2.75 px-2.5 sm:px-3.75 py-2.5 sm:py-3.25 bg-surface border border-surface-border rounded-[9px] hover:border-gold hover:bg-surface-alt transition-colors"
+          className="flex items-center gap-2 sm:gap-2.75 px-2.5 sm:px-3.75 py-2.5 sm:py-3.25 bg-surface border border-surface-border rounded-[9px] hover:border-brand-accent hover:bg-surface-alt transition-colors"
         >
-          <span className="w-2 h-2 rounded-sm bg-gold flex-none rotate-45" />
+          <span className="w-2 h-2 rounded-sm bg-[#FF7A1A] flex-none rotate-45" />
           <span className="font-semibold text-[12px] sm:text-[13.5px] text-fg">{p}</span>
         </div>
       ))}
@@ -146,28 +139,25 @@ function CategoryCard({ category }: { category: Category }) {
   );
 
   return (
-    <div
-      id={category.id}
-      className="bg-surface border border-surface-border rounded-2xl overflow-hidden mt-4.5 first:mt-8.5"
-    >
-      <div className="flex flex-wrap sm:flex-nowrap items-center gap-4.5 px-7 py-5.5 border-b border-surface-border">
-        <div className="order-1 w-14 h-14 rounded-full bg-ink flex items-center justify-center flex-none">
-          <Icon />
+    <div id={category.id} className="flex gap-4.5 mt-4.5 first:mt-8.5 flex-col sm:flex-row items-stretch">
+      <div className="flex-1 bg-white border border-surface-border rounded-2xl p-5.5 sm:p-7">
+        <div className="flex flex-wrap items-center gap-4.5">
+          <div className="w-14 h-14 rounded-full bg-ink flex items-center justify-center flex-none">
+            <Icon />
+          </div>
+          <div className="flex-1 min-w-[200px]">
+            <h3 className="font-display text-[21px] text-fg m-0">{category.title}</h3>
+            <p className="font-normal text-[12.5px] leading-[1.5] text-fg-muted mt-1 max-w-[560px]">
+              {category.description}
+            </p>
+          </div>
+          <div className="flex-none font-bold text-[12px] text-[#0b1e3d] bg-[#69D4FF] px-3.5 py-2 rounded-full whitespace-nowrap">
+            {category.count} Products
+          </div>
         </div>
-        <div className="order-2 sm:order-3 ml-auto sm:ml-0 flex-none font-bold text-[11px] tracking-[1px] text-ink bg-gold px-3.25 py-1.75 rounded-full whitespace-nowrap">
-          {category.count} PRODUCTS
-        </div>
-        <div className="order-3 sm:order-2 w-full sm:w-auto sm:flex-1">
-          <h3 className="font-display text-[21px] text-fg m-0">{category.title}</h3>
-          <p className="font-normal text-[12.5px] leading-[1.5] text-fg-muted mt-1 max-w-[560px]">
-            {category.description}
-          </p>
-        </div>
-      </div>
-      <div className={`flex flex-col ${category.imageFirst ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-        {image}
         {productGrid}
       </div>
+      {image}
     </div>
   );
 }
@@ -178,7 +168,7 @@ export function Products() {
       <div className="max-w-[1180px] mx-auto px-8">
         <div className="flex items-end justify-between gap-6 flex-wrap">
           <div>
-            <div className="font-mono font-semibold text-[12px] tracking-[3px] text-page-accent">
+            <div className="font-mono font-semibold text-[12px] tracking-[3px] text-[#FF7A1A]">
               WHAT WE SUPPLY
             </div>
             <h2 className="font-display text-4xl sm:text-[42px] text-fg mt-3 tracking-[-0.5px]">

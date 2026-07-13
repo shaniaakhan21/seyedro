@@ -9,14 +9,16 @@ const items = [
 
 export function TrustStrip() {
   return (
-    <section className="bg-page">
+    <section className="bg-[#69D4FF]">
       <div className="max-w-[1180px] mx-auto px-8 py-5.5 flex flex-wrap gap-4.5 justify-between">
         {items.map(({ icon: Icon, title, subtitle }) => (
-          <div key={title} className="flex items-center gap-3.25 text-fg">
-            <Icon stroke="currentColor" />
+          <div key={title} className="flex items-center gap-3.25">
+            <div className="w-10 h-10 rounded-full bg-[#0b1e3d] flex items-center justify-center flex-none">
+              <Icon stroke="#ffffff" size={19} />
+            </div>
             <div>
-              <div className="font-extrabold text-[14px] text-fg">{title}</div>
-              <div className="font-medium text-[11px] text-fg-muted">{subtitle}</div>
+              <div className="font-extrabold text-[14px] text-[#0b1e3d]">{title}</div>
+              <div className="font-medium text-[11px] text-[#0b1e3d]/65">{subtitle}</div>
             </div>
           </div>
         ))}

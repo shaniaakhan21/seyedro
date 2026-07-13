@@ -8,7 +8,7 @@ export function About() {
   const badgeIconSrc = theme === 'black' ? goldIcon : blackIcon;
 
   return (
-    <section id="about" className="bg-page-alt py-20">
+    <section id="about" className="bg-[#69D4FF] py-20">
       <div className="max-w-[1180px] mx-auto px-8 flex gap-14 items-center flex-col lg:flex-row">
         <div className="flex-1 relative w-full">
           <img
@@ -20,14 +20,14 @@ export function About() {
             <img src={badgeIconSrc} className="w-10 h-10" alt="" />
             <div>
               <div className="font-display text-[15px] text-fg">Dubai, UAE</div>
-              <div className="font-mono font-medium text-[10px] tracking-[1px] text-page-accent mt-0.5">
+              <div className="font-mono font-medium text-[10px] tracking-[1px] text-fg-muted mt-0.5">
                 HEAD OFFICE
               </div>
             </div>
           </div>
         </div>
         <div className="flex-[1.05] w-full">
-          <div className="font-mono font-semibold text-[12px] tracking-[3px] text-page-accent">
+          <div className="font-mono font-semibold text-[12px] tracking-[3px] text-ink">
             ABOUT SEYEDRO
           </div>
           <h2 className="font-display text-2xl sm:text-[38px] text-fg mt-3 tracking-[-0.5px] leading-[1.2]">
@@ -41,13 +41,13 @@ export function About() {
           </p>
           <div className="flex gap-7.5 mt-7 flex-wrap">
             <div>
-              <div className="font-display text-[26px] text-page-accent">Quality</div>
+              <div className="font-display text-[26px] text-ink">Quality</div>
               <div className="font-normal text-[13px] text-fg-muted mt-1">
                 Specification-matched, consistent batches.
               </div>
             </div>
             <div>
-              <div className="font-display text-[26px] text-page-accent">Scale</div>
+              <div className="font-display text-[26px] text-ink">Scale</div>
               <div className="font-normal text-[13px] text-fg-muted mt-1">
                 Retail to bulk &amp; export volumes.
               </div>
