@@ -73,7 +73,7 @@
     <script>
       (function () {
         try {
-          var theme = localStorage.getItem('seyedro-theme');
+          var theme = localStorage.getItem('seyedro-theme') || 'navy';
           if (theme === 'black' || theme === 'navy') {
             document.documentElement.setAttribute('data-theme', theme);
           }
